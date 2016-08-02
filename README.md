@@ -13,7 +13,7 @@ Inspired by [ksoichiro/dockerfiles](https://github.com/ksoichiro/dockerfiles/tre
 * Git
 
 ##Emulators
-[Android Emulator 23](https://github.com/dyhpoon/Android-Dockerfiles/tree/master/android-emulator-23)
+[Android Emulator 23](https://github.com/jaynakus/Android-Dockerfiles/tree/master/android-emulator-23)
 
 [Android Emulator 22](https://github.com/dyhpoon/Android-Dockerfiles/tree/master/android-emulator-22)
 
