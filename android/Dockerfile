@@ -17,9 +17,9 @@ ENV ANDROID_HOME /opt/android-sdk-linux
 ENV PATH ${PATH}:${ANDROID_HOME}/tools:${ANDROID_HOME}/platform-tools
 
 # Install All Build tools
-RUN android list sdk --all | grep -i "Android SDK Build-tools" | cut -d '-' -f 1 | xargs -I {} sh -c 'echo y | android update sdk -u -a -t {}'
+RUN android list sdk --all | grep -i "Android SDK Build-tools, revision 23.0.3" | cut -d '-' -f 1 | xargs -I {} sh -c 'echo y | android update sdk -u -a -t {}'
 # Install Android API
-RUN echo y | android update sdk --filter android-23,android-22,android-21,android-20,android-19,android-18,android-17,android-16 --no-ui --force --all
+RUN echo y | android update sdk --filter android-23 --no-ui --force --all
 # Platform tools
 RUN android list sdk --all | grep -i "Android SDK Platform-tools" | cut -d '-' -f 1 | xargs -I {} sh -c 'echo y | android update sdk -u -a -t {}'
 # Support libraries
