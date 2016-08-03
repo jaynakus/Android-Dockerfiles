@@ -15,3 +15,20 @@ ADD start-emulator /usr/local/bin/
 VOLUME /root/.gradle
 VOLUME /workspace
 WORKDIR /workspace
+
+####################
+# Gradle
+####################
+
+RUN apt-get update
+RUN apt-get install -y zip unzip
+
+# Install Gradle
+RUN cd /usr/local/ && wget http://services.gradle.org/distributions/gradle-2.10-all.zip && unzip -o gradle-2.10-all.zip
+
+# Set environment variables
+ENV GRADLE_USER_HOME /usr/local/gradle-2.10
+ENV PATH $PATH:$GRADLE_USER_HOME/bin
+
+# Clean up
+RUN rm -rf /usr/local/gradle-2.10-all.zip
